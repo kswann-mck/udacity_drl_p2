@@ -1,7 +1,7 @@
 # Project 2: Continuous Control
 ## Udacity Deep Reinforcement Learning Nano-Degree
 by Kitson Swann
-submitted: 2021-03-30
+submitted: 2021-04-18
 
 This repository contains a solution to the second project of Udacity's Deep Reinforcement Learning Nano-degree.
 The instructions for the project are [here](https://github.com/udacity/deep-reinforcement-learning/tree/master/p2_continuous-control).
@@ -42,7 +42,7 @@ This project requires:
 - Unity
 - Python 3.6
 
-1. Clone this repository `https://github.com/kswann-mck/udacity_drl_p1.git`
+1. Clone this repository `https://github.com/kswann-mck/udacity_drl_p2.git`
 2. [Install Unity](https://unity3d.com/get-unity/download)
 3. Create a folder `env` inside the cloned repo, and download the zip file containing the environment 
    [here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/one_agent/Reacher.app.zip) and put 
@@ -69,7 +69,7 @@ This project requires:
 
 After you have successfully installed units and set up the python 3.6 environment and the conda environment 
 requirements. If you wish, you can re-run the experiment by re-running all the cells in 
-the [Report.ipynb](Report.ipynb). Note that the hyperparameter search takes on the order of hours to run 
+the [Report.ipynb](Report.ipynb). Note that the hyper-parameter search takes on the order of hours to run 
 without a GPU so don't re-run that if you don't have time.
 
 
