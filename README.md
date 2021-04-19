@@ -56,7 +56,7 @@ This project requires:
 ## Project Structure
 
 - [model.py](model.py) - defines the structure of the neural networks for the actor and critic using PyTorch
-- [ddpg_agent.py](dqn_agent.py) - defines the agent implementation
+- [ddpg_agent.py](ddpg_agent.py) - defines the agent implementation
 - [train.py](train.py) - defines the training loop to run a training sequence with a given set of hyperparameters
 - [optimize.py](optimize.py) - defines an optimization routine to search for optimal hyperparameters
 - [Report.ipynb](Report.ipynb) - defines the solution steps, algorithm and outputs from different training and optimiztion runs
