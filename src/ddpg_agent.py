@@ -1,3 +1,11 @@
+"""
+This script is the agent implementation of a Deep Deterministic Policy Gradient agent on the Unity Reacher environment. The base model, agent
+and training function were taken from the solution here:
+https://github.com/udacity/deep-reinforcement-learning/tree/master/ddpg-pendulum.
+
+It was modified to include parameters to make training with different hyperparamter options easier.
+"""
+
 import numpy as np
 import random
 import copy
@@ -40,11 +48,29 @@ class Agent():
     ):
         """Initialize an Agent object.
         
-        Params
-        ======
-            state_size (int): dimension of each state
-            action_size (int): dimension of each action
-            random_seed (int): random seed
+        Parameters
+        ----------
+        state_size: the size of the state representation vector.
+        action_size: the size of the action space.
+        eps_start: float, the starting value of epsilon used to decrease the noise over time
+        eps_end: float, the minimum value of epsilon
+        eps_decay: float, the rate at which epsilon decays with subsequent timesteps
+        buffer_size: the size of the replay experince buffer
+        batch_size: int, the batch sized used for gradient descent during the learning phase
+        update_every: int, the interval of episodes at which the learning step occurs
+        update_times: the number of times to update at each update
+        actor_fc1_units: int, the number of neurons in the first fully connected layer of the actor neural network
+        actor_fc2_units: int, the number of neurons in the second fully connected layer of the actor neural network
+        critic_fc1_units: int, the number of neurons in the first fully connected layer of the critic neural network
+        critic_fc2_units: int, the number of neurons in the second fully connected layer of the critic neural network
+        actor_lr: float, the learning rate for gradient descent of the actor network
+        critic_lr: float, the learning rate for gradient descent of the critic network
+        gamma: float, the reward discount factor used in updates
+        tau: float, the interpolation parameter for the soft update
+        weight_decay: the weight decay rate for the adam optimizer used on the critic network
+        noise_theta: the theta term on the Ornstein-Uhlenbeck process used to add noise during training
+        noise_sigma: the sigma term on the Ornstein-Uhlenbeck process used to add noise during training
+        random_seed: the random seed used for consistency
         """
         self.state_size = state_size
         self.action_size = action_size

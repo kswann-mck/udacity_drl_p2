@@ -57,21 +57,34 @@ def train_ddpg(
     Parameters
     ----------
     env: UnityEnvironment, the Reacher environment.
-    name: string, the name to associate with the model checkpoint
-    break_early: bool, if the operation should cease when the solved threshold is reached
-    solved_threshold: float,  the point at which the task is considered solved
-    n_episodes: int, the maximum number of episodes to train for
-    max_t: int, the maximum number of timesteps per episode,
-    eps_start: float, the starting value of epsilon
+    brain_name: The name of the brain in the unity environemts.
+    num_agents: The number of agents training simultaniously.
+    name: string, the name to associate with the model checkpoint.
+    break_early: bool, if the operation should cease when the solved threshold is reached.
+    solved_threshold: float,  the point at which the task is considered solved.
+    n_episodes: int, the maximum number of episodes to train for.
+    max_t: int, the maximum number of timesteps per episode.
+    state_size: the size of the state representation vector.
+    action_size: the size of the action space.
+    eps_start: float, the starting value of epsilon used to decrease the noise over time
     eps_end: float, the minimum value of epsilon
-    eps_decay: float, the rate at which epsilon decays with subsequent episodes
+    eps_decay: float, the rate at which epsilon decays with subsequent timesteps
+    buffer_size: the size of the replay experince buffer
     batch_size: int, the batch sized used for gradient descent during the learning phase
     update_every: int, the interval of episodes at which the learning step occurs
-    fc1_units: int, the number of neurons in the first fully connected layer of the neural network
-    fc2_units: int, the number of neurons in the second fully connected layer of the neural network
-    lr: float, the learning rate for gradient descent
+    update_times: the number of times to update at each update
+    actor_fc1_units: int, the number of neurons in the first fully connected layer of the actor neural network
+    actor_fc2_units: int, the number of neurons in the second fully connected layer of the actor neural network
+    critic_fc1_units: int, the number of neurons in the first fully connected layer of the critic neural network
+    critic_fc2_units: int, the number of neurons in the second fully connected layer of the critic neural network
+    actor_lr: float, the learning rate for gradient descent of the actor network
+    critic_lr: float, the learning rate for gradient descent of the critic network
     gamma: float, the reward discount factor used in updates
     tau: float, the interpolation parameter for the soft update
+    weight_decay: the weight decay rate for the adam optimizer used on the critic network
+    noise_theta: the theta term on the Ornstein-Uhlenbeck process used to add noise during training
+    noise_sigma: the sigma term on the Ornstein-Uhlenbeck process used to add noise during training
+    random_seed: the random seed used for consistency
 
     Returns
     -------
