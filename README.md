@@ -1,7 +1,7 @@
 # Project 2: Continuous Control
 ## Udacity Deep Reinforcement Learning Nano-Degree
 by Kitson Swann
-submitted: 2021-04-18
+submitted: 2021-04-19
 
 This repository contains a solution to the second project of Udacity's Deep Reinforcement Learning Nano-degree.
 The instructions for the project are [here](https://github.com/udacity/deep-reinforcement-learning/tree/master/p2_continuous-control).
@@ -55,13 +55,15 @@ This project requires:
 
 ## Project Structure
 
-- [model.py](model.py) - defines the structure of the neural network using PyTorch
-- [agent.py](dqn_agent.py) - defines the agent implementation including the learning step
+- [model.py](model.py) - defines the structure of the neural networks for the actor and critic using PyTorch
+- [ddpg_agent.py](dqn_agent.py) - defines the agent implementation
 - [train.py](train.py) - defines the training loop to run a training sequence with a given set of hyperparameters
 - [optimize.py](optimize.py) - defines an optimization routine to search for optimal hyperparameters
 - [Report.ipynb](Report.ipynb) - defines the solution steps, algorithm and outputs from different training and optimiztion runs
-- [checkpoint_base_model.pth](checkpoint_base_model.pth) - the saved model weights from the initial parameter choices 
-- [checkpoint_optimal_model.pth](checkpoint_optimal_model.pth) - the saved model weights from the initial parameter choices
+- [checkpoint_actor_optimal.pth](checkpoint_actor_optimal.pth) - the saved model weights for tha actor network from the solution that solved the task
+- [checkpoint_critic_optimal.pth](checkpoint_actor_optimal.pth) - the saved model weights for tha critic network from the solution that solved the task
+- [checkpoint_actor_alternate.pth](checkpoint_actor_alternate.pth) - the saved model weights for tha actor network from the longer training run with a larger network
+- [checkpoint_critic_alternate.pth](checkpoint_critic_alternate.pth) - the saved model weights for tha critic network from the longer training run with a larger network
 - [playing.gif](playing.gif) - a gif of the trained optimal agent playing
 - [environment.yml](environment.yml) - the conda environment file for reproducing the experiment
 
