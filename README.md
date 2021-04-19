@@ -59,6 +59,7 @@ This project requires:
 - [ddpg_agent.py](ddpg_agent.py) - defines the agent implementation
 - [train.py](train.py) - defines the training loop to run a training sequence with a given set of hyperparameters
 - [optimize.py](optimize.py) - defines an optimization routine to search for optimal hyperparameters
+- [Report.md](Report.md) - defines the solution steps, algorithm and outputs from different training and optimiztion runs in markdown
 - [Report.ipynb](Report.ipynb) - defines the solution steps, algorithm and outputs from different training and optimiztion runs
 - [checkpoint_actor_optimal.pth](checkpoint_actor_optimal.pth) - the saved model weights for tha actor network from the solution that solved the task
 - [checkpoint_critic_optimal.pth](checkpoint_actor_optimal.pth) - the saved model weights for tha critic network from the solution that solved the task
